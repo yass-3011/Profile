@@ -1,3 +1,9 @@
+:root {
+  --font-color: #ba8118;
+  --shadow-hover: #eca521;
+  --min-color: #1f1f1f;
+  --foot-head-color: #1c1c1c;
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -8,14 +14,14 @@ body {
   font-family: "Changa", sans-serif;
   font-family: "Open Sans", sans-serif;
   font-family: "Roboto", sans-serif;
-  background-color: #1f1f1f;
+  background-color: var(--min-color);
 }
 html {
   scroll-behavior: smooth;
 }
 /* Start Header */
 .header {
-  background-color: #181818c0;
+  background-color: var(--foot-head-color);
 }
 .container {
   padding-left: 15px;
@@ -105,7 +111,7 @@ html {
   list-style: none;
   margin: 0;
   padding: 0;
-  background-color: #1c1c1c;
+  background-color: #242424;
   position: absolute;
   right: 0;
   width: 160px;
@@ -120,7 +126,7 @@ html {
 .header .links ul::before {
   content: "";
   border-width: 10px;
-  border-color: transparent transparent #1c1c1c transparent;
+  border-color: transparent transparent #242424 transparent;
   border-style: solid;
   position: absolute;
   right: 1px;
@@ -137,20 +143,20 @@ html {
   -o-transition: 0.3s;
 }
 .header .links ul li:hover {
-  background-color: rgb(39, 39, 39);
+  background-color: var(--foot-head-color);
   padding-left: 5px;
 }
 .header .links ul:focus {
   display: block;
 }
 .header .links ul li:not(last-child) {
-  border-bottom: #252525 solid 1.5px;
+  border-bottom: var(--foot-head-color) solid 1.5px;
 }
 .header .links ul li a {
   display: block;
   padding: 10px;
   text-decoration: none;
-  color: #ba8118;
+  color: var(--font-color);
   font-weight: 300;
   cursor: pointer;
 }
@@ -164,7 +170,7 @@ html {
   font-family: "Font Awesome 6 Brands";
   font-weight: 300;
   font-size: 25px;
-  color: #ba8118;
+  color: var(--font-color);
   transition: 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -173,7 +179,7 @@ html {
 }
 .container .nav .fa-brands:hover {
   text-shadow: 0px 0px 5px #ba8118;
-  color: #865c0f;
+  color: var(--shadow-hover);
   transform: scale(1.2);
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
@@ -227,8 +233,8 @@ html {
   align-items: center;
 }
 .skills .skill {
-  color: #ba8118;
-  background-color: #1f1f1f;
+  color: var(--font-color);
+  background-color: var(--min-color);
   padding: 40px;
   height: 240px;
   text-align: center;
@@ -246,8 +252,8 @@ html {
 }
 .skills .skill:hover {
   background-color: #ba8118;
-  color: #1f1f1f;
-  border: #1f1f1f solid 1px;
+  color: var(--min-color);
+  border: var(--min-color) solid 1px;
 }
 .skills .skill i {
   font-size: 40px;
@@ -264,11 +270,11 @@ html {
 .special {
   cursor: pointer;
   text-align: center;
-  color: transparent;
-  font-size: 60px;
+  color: var(--font-color);
+  padding: 20px;
+  font-size: 40px;
   font-weight: bolder;
   letter-spacing: 2px;
-  text-shadow: 0px 0px 5px #815a13;
   transition: 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -276,7 +282,8 @@ html {
   -o-transition: 0.5s;
 }
 .special:hover {
-  color: #ba8118;
+  text-shadow: 0px 0px 5px var(--shadow-hover);
+  color: var(--shadow-hover);
 }
 .services .sevrvices-count {
   display: grid;
@@ -286,7 +293,7 @@ html {
 }
 .services .sevrvices-count .col .srv {
   text-align: center;
-  color: #ba8118;
+  color: var(--font-color);
   display: flex;
   margin-bottom: 40px;
   flex-direction: column;
@@ -334,7 +341,7 @@ html {
 .portfolio {
   text-align: center;
   padding-bottom: 50px;
-  background-color: #1f1f1f;
+  background-color: var(--min-color);
 }
 .portfolio .container .port-content {
   display: grid;
@@ -344,7 +351,7 @@ html {
 .card {
   text-align: center;
   background-color: #1c1c1c;
-  color: #ba8118;
+  color: var(--font-color);
   overflow: hidden;
   margin: auto;
   border-radius: 8px;
@@ -393,7 +400,7 @@ html {
   text-align: center;
   /* margin: 10px; */
   padding: 25px;
-  color: #ba8118;
+  color: var(--font-color);
 }
 .footer-content h2 {
   font-size: 30px;
@@ -410,7 +417,7 @@ html {
   /* margin: 10px; */
 }
 .footer-content .fot a {
-  color: #ba8118;
+  color: var(--font-color);
   transition: 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -418,10 +425,31 @@ html {
   -o-transition: 0.5s;
 }
 .footer-content .fot a:hover {
-  color: #eca521;
+  color: var(--shadow-hover);
   text-shadow: 0px 0px 5px #eca521;
 }
 /* Start Footer */
+/* Start Scroll */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--foot-head-color);
+}
+::-webkit-scrollbar-thumb {
+  box-shadow: 0 0 5px var(--shadow-hover);
+  margin: 2px;
+  background-color: var(--font-color);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--shadow-hover);
+}
+/* End Scroll */
 /* Start Media */
 /* Small */
 @media (min-width: 320px) and (max-width: 500px) {
@@ -458,11 +486,11 @@ html {
   }
   .special {
     text-align: center;
-    color: transparent;
+    color: var(--font-color);
     font-size: 40px;
     font-weight: bold;
     letter-spacing: 2px;
-    text-shadow: 0px 0px 5px #815a13;
+    /* text-shadow: 0px 0px 5px #815a13; */
   }
   .services .sevrvices-count .col img {
     width: 280px;
