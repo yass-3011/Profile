@@ -1,6 +1,6 @@
 :root {
   --font-color: #ba8118;
-  --shadow-hover: #eca521;
+  --shadow-hover: #fdb32a94;
   --min-color: #1f1f1f;
   --foot-head-color: #1c1c1c;
 }
@@ -22,15 +22,16 @@ html {
 /* Start Header */
 .header {
   background-color: var(--foot-head-color);
+  padding: 20px;
+  /* position: sticky; */
+  position: fixed;
+  width: 100%;
 }
 .container {
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-}
-.header {
-  padding: 20px;
 }
 .header .container {
   display: flex;
@@ -195,6 +196,9 @@ html {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: relative;
+  top: 80px;
+  z-index: -10;
 }
 .landing .txt {
   color: #0f0f0f;
@@ -364,10 +368,6 @@ html {
   -moz-transition: 0.5s;
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
-}
-.card:hover {
-  background-color: #ba8118;
-  color: #1c1c1c;
 }
 .card .info {
   padding: 20px;
